@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Agency — Hiérarchie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --blue: #3b82f6;
+            --green: #22c55e;
+            --yellow: #eab308;
+            --red: #ef4444;
+            --accent: #38bdf8;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(180deg, #020617, var(--bg));
+            color: var(--text);
+            padding: 2rem;
+        }
+
+        header {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: .5rem;
+        }
+
+        header p {
+            color: var(--muted);
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .level {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            border-radius: 16px;
+            background: var(--card);
+            box-shadow: 0 10px 30px rgba(0,0,0,.3);
+        }
+
+        .level h2 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .level.blue h2 { color: var(--blue); }
+        .level.green h2 { color: var(--green); }
+        .level.yellow h2 { color: var(--yellow); }
+        .level.red h2 { color: var(--red); }
+
+        .role {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.03);
+        }
+
+        .role strong {
+            color: var(--accent);
+        }
+
+        .evolution {
+            margin-left: 1.5rem;
+            color: var(--muted);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            color: var(--muted);
+            font-size: .9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🧭 AGENCY — Hiérarchie</h1>
+    <p>
+        Bienvenue dans le système hiérarchique de l’Agency.<br>
+        Chaque membre commence au Niveau 1 et peut évoluer jusqu’à la Direction selon ses résultats et son implication.
+        <br><br>
+        ⚠️ Certains chemins permettent une progression plus rapide que d’autres.
+    </p>
+</header>
+
+<section class="level blue">
+    <h2>🟦 Niveau 1 — Départ</h2>
+
+    <div class="role">🧠 <strong>Développeur (Dev)</strong></div>
+    <div class="role">💬 <strong>Communicateur</strong></div>
+    <div class="role">🌾 <strong>Farmer</strong></div>
+    <div class="role">🕵️ <strong>Agent de Terrain (A.T.)</strong></div>
+</section>
+
+<section class="level green">
+    <h2>🟩 Niveau 2 — Évolutions</h2>
+
+    <div class="role">
+        🧠 <strong>Développeur (Dev)</strong>
+        <div class="evolution">→ Aucune évolution spécifiée</div>
+    </div>
+
+    <div class="role">
+        💬 <strong>Communicateur</strong>
+        <div class="evolution">→ 📋 Assignateur de missions</div>
+        <div class="evolution">→ 💰 Monétisateur</div>
+    </div>
+
+    <div class="role">
+        🌾 <strong>Farmer</strong>
+        <div class="evolution">→ 🧭 Superviseur</div>
+        <div class="evolution">→ 💰 Monétisateur</div>
+    </div>
+
+    <div class="role">
+        🕵️ <strong>Agent de Terrain (A.T.)</strong>
+        <div class="evolution">→ ⚔️ A.R.S. (Agency Raid Service)</div>
+        <div class="evolution">→ 🧭 Superviseur</div>
+    </div>
+</section>
+
+<section class="level yellow">
+    <h2>🟨 Niveau 3 — Hiérarchie Intermédiaire</h2>
+
+    <div class="role">⚔️ <strong>A.R.S.</strong>
+        <div class="evolution">→ 🧭 Superviseur</div>
+    </div>
+
+    <div class="role">💰 <strong>Monétisateur</strong>
+        <div class="evolution">→ 🧭 Superviseur</div>
+    </div>
+
+    <div class="role">📋 <strong>Assignateur de missions</strong>
+        <div class="evolution">→ 🧭 Superviseur</div>
+    </div>
+
+    <div class="role">🧭 <strong>Superviseur</strong>
+        <div class="evolution">→ 👑 Hiérarchie</div>
+    </div>
+</section>
+
+<section class="level red">
+    <h2>🟥 Niveau 4 — Direction</h2>
+
+    <div class="role">👑 <strong>Hiérarchie</strong>
+        <div class="evolution">→ 🏛️ Direction</div>
+    </div>
+
+    <div class="role">
+        🏛️ <strong>Direction</strong>
+        <div class="evolution">
+            Gère, encadre et oriente toute l’Agency.<br>
+            Grade final réservé aux leaders expérimentés et de confiance.
+        </div>
+    </div>
+</section>
+
+<footer>
+    © Agency — Système hiérarchique
+</footer>
+
+</body>
+</html>
